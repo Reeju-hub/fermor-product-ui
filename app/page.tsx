@@ -1,10 +1,18 @@
 "use client";
 import { motion } from "framer-motion";
+import { Variants } from "framer-motion";
 import { ArrowRight, BarChart3, ShieldCheck, Zap, Globe, LineChart } from "lucide-react";
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { 
+      duration: 0.8, 
+      ease: "easeOut" // <--- Using a standard string is always type-safe
+    } 
+  }
 };
 
 const staggerContainer = {
